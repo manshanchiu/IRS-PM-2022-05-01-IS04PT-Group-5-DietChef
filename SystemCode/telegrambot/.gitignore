@@ -1,0 +1,30 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+.env*
+!.env.sample
+.DS_Store
+
+#local dynamodb
+.dynamodb
+
+#local step functions
+.step-functions-local
+
+#test data
+testData
+
+#ignore config
+config/envs/**
+!config/envs/sample.json

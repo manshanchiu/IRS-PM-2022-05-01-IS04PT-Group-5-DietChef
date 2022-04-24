@@ -1,0 +1,21 @@
+service: issrecipepyactions
+
+frameworkVersion: '2 || 3'
+
+provider:
+    name: aws
+    runtime: python3.7
+    lambdaHashingVersion: 20201221
+    stage: ${opt:stage, 'dev'}
+    region: ${self:custom.vars.region, 'ap-southeast-1'}
+    environment:
+        STAGE: ${self:provider.stage}
+
+
+functions:
+    processuserinput:
+        name: ${self:service}-process-userinput
+        handler: processuserinput.lambda_handler
+        timeout: 300
+        layers:
+            - arn:aws:lambda:ap-southeast-1:113088814899:layer:Klayers-python37-spacy:1

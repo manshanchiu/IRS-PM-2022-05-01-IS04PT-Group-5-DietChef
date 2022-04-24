@@ -1,0 +1,1 @@
+{"recipe":{"publisher":"Tasty Kitchen","ingredients":["1 box 1 box","1 box 1 box","1 tub 1 tub"],"source_url":"http://tastykitchen.com/recipes/desserts/jell-o-poke-cake/","recipe_id":"1f98d4","image_url":"http://forkify-api.herokuapp.com/images/pokecakeba3a.jpg","social_rank":35.49621115385608,"publisher_url":"http://tastykitchen.com","title":"Jell-O Poke Cake"}}

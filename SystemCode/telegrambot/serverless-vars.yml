@@ -1,0 +1,50 @@
+test:
+  region: ap-southeast-2
+  role: arn:aws:iam::602267132653:role/api-s3-read
+  appName: emplify
+  portfolioName: emd
+  NODE_ENV: test
+  processSAMLRole: arn:aws:iam::602267132653:role/api-s3-read
+  principalArn: "arn:aws:iam::602267132653:saml-provider/EMPLIFY-Dev"
+  redirectUrl: "REDIRECT_URL"
+  smId: emd/emplify/dev/portal/secrets
+test2:
+  region: ap-southeast-2
+  role: arn:aws:iam::602267132653:role/api-s3-read
+  appName: emplify
+  portfolioName: emd
+  NODE_ENV: test2
+  processSAMLRole: arn:aws:iam::602267132653:role/api-s3-read
+  principalArn: "arn:aws:iam::602267132653:saml-provider/EMPLIFY-Dev"
+  redirectUrl: "REDIRECT_URL"
+  smId: emd/emplify/dev/portal/secrets
+local:
+  region: ap-southeast-2
+  role: arn:aws:iam::602267132653:role/api-s3-read
+  appName: emplify
+  portfolioName: emd
+  NODE_ENV: local
+  processSAMLRole: arn:aws:iam::602267132653:role/api-s3-read
+  principalArn: "arn:aws:iam::602267132653:saml-provider/EMPLIFY-Dev"
+  redirectUrl: "REDIRECT_URL"
+  smId: emd/emplify/dev/portal/secrets
+dev:
+  region: ap-southeast-1
+  role: arn:aws:iam::531108637556:role/emd-emplify-dev-Lambda-Frontend-Role
+  processSAMLRole: arn:aws:iam::531108637556:role/emd-emplify-dev-Lambda-ProcessSAML-Role
+  portfolioName: emd
+  appName: emplify
+  vpcId: vpc-01fcff16bf2469cc2
+  vpcEndpointId: vpce-0bbfd66690fcbf0f8
+  sgId: sg-099b23ac6849b764e
+  subnetIds: subnet-0ccdc0139c0ddb146,subnet-0dd196444b65eb203,subnet-08180cd8ca8fc1be7
+  NODE_ENV: dev
+  proxyUrl: http://proxy.sin.services.nonprod.lz.aws:3128
+  principalArn: "arn:aws:iam::531108637556:saml-provider/ADFS-Dev"
+  redirectUrl: "REDIRECT_URL"
+  smId: emd/emplify/dev/portal/secrets
+preprod:
+  role: preprodrole
+
+prod:
+  role: ''
