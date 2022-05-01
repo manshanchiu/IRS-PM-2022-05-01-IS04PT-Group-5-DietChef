@@ -1,0 +1,8 @@
+Group name: DietChef
+Members
+1. Chen Hao (A0146967L)
+2. Chiu Man Shan (A0249252A)
+3. Kuch Swee Cheng (A0249246X)
+4. Zhao Lutong (A0249279L)
+
+Github: https://github.com/manshanchiu/IRS-PM-2022-01-22-IS04PT-Group-5-DietChef
