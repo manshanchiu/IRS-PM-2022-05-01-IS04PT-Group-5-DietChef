@@ -31,7 +31,7 @@ We also realised the world produces enough food to nourish every man, woman and 
 
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
-`Business Video [here](https://www.youtube.com/watch?v=W9xtdFcULBM)`
+[Business Video](https://www.youtube.com/watch?v=W9xtdFcULBM)
 `Technical Video [here](https://www.youtube.com/watch?v=Nli73PCvKNI)`
 `Demo Video`
 
@@ -39,8 +39,8 @@ We also realised the world produces enough food to nourish every man, woman and 
 
 ## SECTION 5 : USER GUIDE
 
-`Refer to project report at Github Folder: ProjectReport -> [User and Installation guide.pdf](ProjectReport/User%20and%20Installation%20guide.pdf)
-`
+Refer to project report at Github Folder: ProjectReport -> [User and Installation guide.pdf](ProjectReport/User%20and%20Installation%20guide.pdf)
+
 
 ---
 ## SECTION 6 : PROJECT REPORT / PAPER
