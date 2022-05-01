@@ -32,8 +32,8 @@ We also realised the world produces enough food to nourish every man, woman and 
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
 [Business Video](https://www.youtube.com/watch?v=W9xtdFcULBM)
-`Technical Video [here](https://www.youtube.com/watch?v=Nli73PCvKNI)`
-`Demo Video`
+[Technical Video](https://www.youtube.com/watch?v=Nli73PCvKNI)
+[Demo Video](https://www.youtube.com/watch?v=W9xtdFcULBM)
 
 ---
 
