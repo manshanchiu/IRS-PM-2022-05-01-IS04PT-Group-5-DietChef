@@ -47,4 +47,4 @@ Refer to project report at Github Folder: ProjectReport -> [User and Installatio
 ---
 ## SECTION 6 : PROJECT REPORT / PAPER
 
-Refer to project report at Github Folder: ProjectReport -> [IRS_PM_2022_05_01_IS04PT_GRP_05_DietChef_ProjectReport.pdf] (ProjectReport/IRS_PM_2022_05_01_IS04PT_GRP_05_DietChef_ProjectReport.pdf)
+Refer to project report at Github Folder: ProjectReport -> [IRS_PM_2022_05_01_IS04PT_GRP_05_DietChef_ProjectReport.pdf](ProjectReport/IRS_PM_2022_05_01_IS04PT_GRP_05_DietChef_ProjectReport.pdf)
