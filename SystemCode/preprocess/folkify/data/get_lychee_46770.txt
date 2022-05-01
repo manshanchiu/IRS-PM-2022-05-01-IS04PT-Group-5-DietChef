@@ -1,1 +1,0 @@
-{"recipe":{"publisher":"Cookstr","ingredients":["2 oz vodka","1 oz syrup from canned lychees"],"source_url":"http://www.cookstr.com/recipes/lychee-martini","recipe_id":"46770","image_url":"http://forkify-api.herokuapp.com/images/recipe3532a73f.jpg","social_rank":34.80777735743579,"publisher_url":"http://www.cookstr.com","title":"Lychee Martini"}}

@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({ path: 'local.env' });
 const { handler } = require('./src/controllers/v1_0/bot/handler');
 const { logger } = require('./src/shared/services/utils');
 

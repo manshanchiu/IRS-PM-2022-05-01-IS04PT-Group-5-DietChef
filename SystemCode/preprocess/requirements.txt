@@ -1,0 +1,9 @@
+###### Requirements without Version Specifiers ######
+requests
+pandas
+python-dotenv
+spacy
+nltk
+numpy
+gensim
+sklearn

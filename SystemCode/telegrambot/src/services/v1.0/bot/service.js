@@ -2,10 +2,7 @@
 class Ingredient {
     constructor(name, value) {
         this._name = name;
-        // eslint-disable-next-line no-restricted-globals
-        if (!isNaN(value)) {
-            this._value = parseInt(value, 10);
-        }
+        this._value = parseInt(value, 10) || undefined;
     }
 
     get name() {

@@ -1,1 +1,0 @@
-{"recipe":{"publisher":"All Recipes","ingredients":["1 bunch kale","1 tablespoon olive oil","1 teaspoon seasoned salt"],"source_url":"http://allrecipes.com/Recipe/Baked-Kale-Chips/Detail.aspx","recipe_id":"2499","image_url":"http://forkify-api.herokuapp.com/images/490832414f.jpg","social_rank":99.99999360262585,"publisher_url":"http://allrecipes.com","title":"Baked Kale Chips"}}

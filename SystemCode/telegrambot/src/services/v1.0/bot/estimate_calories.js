@@ -83,7 +83,7 @@ class EstimateCalories extends Base {
             t += `[${i + 1}. ${r._source.title} (${parseInt(
                 r._source.sum_cal,
                 10
-            )} cal)](${r._source.source_url})\n`;
+            )} kcal)](${r._source.source_url})\n`;
         }
         return t;
     }

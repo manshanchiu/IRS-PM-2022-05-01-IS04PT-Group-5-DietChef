@@ -3,10 +3,13 @@ import json
 import re
 
 nlp = spacy.load('/opt/en_core_web_sm-2.1.0')
+# nlp = spacy.load('en_core_web_sm')
 with open('data/unit_to_gram_convertion.json', 'r') as f:
     UNITS = json.load(f)
 with open('data/nutritions_dict.json', 'r') as f:
     NUTRITIONS_DICT = json.load(f)
+
+CalorieUnits = ['calorie','kcal']
 
 
 def my_preprocessing(raw_sentence): 
@@ -17,11 +20,9 @@ def my_preprocessing(raw_sentence):
             preprocessed_sentence.append(word.lemma_)
     return preprocessed_sentence
 
-def findIngredients(input):
+def findIngredientsAndCalorie(input):
     print(input)
-    # input = findAllUnitAndRemoveSpace(input)
-    # print(input)
-    ingredients = []
+    keywords = []
     arr_words = my_preprocessing(input)
     print(arr_words)
     finalinput = []
@@ -30,10 +31,11 @@ def findIngredients(input):
         if i >0:
             lastword = finalinput[len(finalinput) - 1]
             if "{0} {1}".format(lastword,w) in NUTRITIONS_DICT:
-                # override lastword
+                # combine single word into a full ingredient name
                 finalinput[len(finalinput) - 1] = "{0} {1}".format(lastword,w)
                 continue
-            elif w in UNITS and lastword.isdigit():
+            elif (w in UNITS or w in CalorieUnits) and lastword.isdigit():
+                # combine unit and number
                 finalinput[len(finalinput) - 1] = "{0} {1}".format(lastword,w)
                 continue
         finalinput.append(w)
@@ -41,6 +43,7 @@ def findIngredients(input):
 
     for i in range(len(finalinput)):
         w = finalinput[i]
+        print(w)
         if w in NUTRITIONS_DICT:
             # check prvious
             if i > 0:
@@ -55,18 +58,39 @@ def findIngredients(input):
                     if u in UNITS:
                         nn = int(n) * UNITS[u]
                         print('find ingredient: %s -> %s%s (%sg)' % (w,n,u,nn))
-                        ingredients.append({
+                        keywords.append({
+                            'type': 'ingredient',
                             'ingredient': w,
-                            'original unit': '{0}{1}'.format(n,u),
-                            'in_g': nn,
+                            'original': '{0}{1}'.format(n,u),
+                            'value': nn,
                         })
                         continue
+            keywords.append({
+                'type': 'ingredient',
+                'ingredient': w
+            })
             print('find ingredient: %s' % w)
-    return ingredients
+        
+        for cu in CalorieUnits:
+            if w.endswith(cu):
+                m = re.search(r'^(\d+)(.*)$', w)
+                if m:
+                    # find unit
+                    # convert unit to gram
+                    n = m.group(1).strip()
+                    u = m.group(2).strip()
+                    print('find calorie limit: %s %s' % (n,u))
+                    keywords.append({
+                        'type': 'calorie',
+                        'value': int(n),
+                        'original': '{0}{1}'.format(n,u),
+                    })
+                    break
+    return keywords
 
 def lambda_handler(event,context):
-    ingredients= findIngredients(event["body"])
-    return {"statusCode": 200, "body": json.dumps(ingredients)}
+    ingredients= findIngredientsAndCalorie(event["body"])
+    return {"statusCode": 200, "body": ingredients}
 
 
-# findIngredients("i have 250 kg pork want to make a meal with less than 350 cal")
+print(findIngredientsAndCalorie('i have pork and 350g chicken want to make a meal with less than 350 kcal'))

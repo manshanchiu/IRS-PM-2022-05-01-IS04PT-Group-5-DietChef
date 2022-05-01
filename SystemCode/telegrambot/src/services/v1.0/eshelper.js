@@ -25,6 +25,46 @@ class ESHelper {
         });
     }
 
+    async searchRecipeByName(indexname, name, topN) {
+        return this.client.search({
+            index: indexname,
+            query: {
+                match_phrase: {
+                    title: {
+                        query: name,
+                    },
+                },
+            },
+            size: topN,
+            _source: [
+                'recipe_id',
+                'sum_cal',
+                'title',
+                'source_url',
+                'similar_recipes',
+            ],
+        });
+    }
+
+    async searchRecipeByIds(indexname, ids) {
+        console.log(ids);
+        return this.client.search({
+            index: indexname,
+            query: {
+                terms: {
+                    _id: ids,
+                },
+            },
+            _source: [
+                'recipe_id',
+                'sum_cal',
+                'title',
+                'source_url',
+                'similar_recipes',
+            ],
+        });
+    }
+
     async getAverageCalories(indexname, foodname) {
         return this.client.search({
             index: indexname,
@@ -78,18 +118,12 @@ class ESHelper {
     }
 
     async searchIngredients(indexname, ingredients) {
-        let q = {
+        const q = {
             bool: {
                 must: [
                     {
                         bool: {
-                            should: [
-                                {
-                                    match_phrase: {
-                                        'ingredient.keyword': 'cheese',
-                                    },
-                                },
-                            ],
+                            should: [],
                         },
                     },
                 ],
@@ -103,7 +137,7 @@ class ESHelper {
                 },
             });
         });
-
+        console.log(JSON.stringify(q));
         return this.client.search({
             index: indexname,
             query: q,

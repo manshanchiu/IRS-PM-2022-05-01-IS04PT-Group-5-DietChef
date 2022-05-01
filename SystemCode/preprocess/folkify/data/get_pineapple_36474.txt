@@ -1,1 +1,0 @@
-{"recipe":{"publisher":"Simply Recipes","ingredients":["One ripe pineapple\n"],"source_url":"http://www.simplyrecipes.com/recipes/how_to_cut_a_pineapple/","recipe_id":"36474","image_url":"http://forkify-api.herokuapp.com/images/howtocutapineapple300x200055679a7.jpg","social_rank":99.99999991623483,"publisher_url":"http://simplyrecipes.com","title":"How to Cut a Pineapple"}}

@@ -33,6 +33,7 @@ class RecommendBasedonPreferences extends Base {
             );
         } else {
             this._preferences = preferences;
+            await this.genericSearch();
         }
     }
 
@@ -103,13 +104,17 @@ class RecommendBasedonPreferences extends Base {
     buildResponse() {
         let t = '';
         if (this._calorie) {
-            t += `*Calorie: ${this._calorie} cal*\n`;
+            t += `*Calorie: ${this._calorie} kcal*\n`;
         }
 
         if (this._ingredients.length > 0) {
             t += `\n*Ingredients*\n`;
             for (let i = 0; i < this._ingredients.length; i += 1) {
-                t += `- ${this._ingredients[i].name} (${this._ingredients[i].value}g)\n`;
+                t += `- ${this._ingredients[i].name}`;
+                if (this._ingredients[i].value) {
+                    t += ` (${this._ingredients[i].value}g)`;
+                }
+                t += '\n';
             }
         }
 

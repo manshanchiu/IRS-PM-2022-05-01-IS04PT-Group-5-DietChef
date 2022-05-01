@@ -13,6 +13,7 @@ jspm_packages
 *.tfstate.*
 
 .env*
+*.env
 !.env.sample
 .DS_Store
 

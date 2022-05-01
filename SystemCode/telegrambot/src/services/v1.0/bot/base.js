@@ -29,7 +29,7 @@ class Base {
 
     async handleCommand() {
         // split commend
-        const t = this._message.split(`/${this.constructor.commend} `)[1];
+        const t = this._message.split(`/${this.constructor.command} `)[1];
         await this._handle(t);
     }
 

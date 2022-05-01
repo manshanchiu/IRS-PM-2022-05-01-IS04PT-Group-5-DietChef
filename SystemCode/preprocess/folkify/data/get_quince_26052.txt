@@ -1,1 +1,0 @@
-{"recipe":{"publisher":"All Recipes","ingredients":["4 1/2 pounds ripe quinces","5 1/2 cups white sugar","water to cover"],"source_url":"http://allrecipes.com/Recipe/Quince-Paste/Detail.aspx","recipe_id":"26052","image_url":"http://forkify-api.herokuapp.com/images/2981512850.jpg","social_rank":40.03634652478354,"publisher_url":"http://allrecipes.com","title":"Quince Paste"}}

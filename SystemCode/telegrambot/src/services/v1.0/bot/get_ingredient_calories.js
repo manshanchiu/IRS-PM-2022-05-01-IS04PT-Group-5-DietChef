@@ -21,6 +21,7 @@ class GetIngredientCalories extends Base {
     }
 
     async _handle(input) {
+        console.log(input);
         if (!input) {
             this.sendMessage(GetIngredientCalories.Questions.askForIngredient, {
                 reply_markup: {
@@ -29,6 +30,7 @@ class GetIngredientCalories extends Base {
             });
         } else {
             this._input = input;
+            await this.genericSearch();
         }
     }
 
@@ -70,7 +72,7 @@ class GetIngredientCalories extends Base {
             });
         } catch (err) {
             console.log(err);
-            this.sendMessage("*Sorry we can't find any preference*", {
+            this.sendMessage("*Sorry we can't find any ingredient*", {
                 parse_mode: 'Markdown',
                 reply_to_message_id: this._messageId,
             });
@@ -101,6 +103,7 @@ class GetIngredientCalories extends Base {
             for (let i = 0; i < this._ingredientsResult.length; i += 1) {
                 const ingredient = this._ingredientsResult[i];
                 t += `- 1g of *${ingredient._source.ingredient}* is ${ingredient._source.cal}cal`;
+
                 const specfiedValue = this._ingredients.find(
                     (ii) => ii.name === ingredient._source.ingredient
                 ).value;
