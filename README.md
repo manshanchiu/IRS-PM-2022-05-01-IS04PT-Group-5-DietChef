@@ -1,8 +1,10 @@
 ﻿## SECTION 1 : PROJECT TITLE
 ## DietChef - Intelligent Diet Assistant System
-
+<p align="center">
 <img src="SystemCode/data/logo.png"
      style="float: left; margin-right: 0px;" />
+</p>
+
 
 ---
 
@@ -20,13 +22,10 @@ We also realised the world produces enough food to nourish every man, woman and 
 
 | Official Full Name  | Student ID (MTech Applicable)  | Work Items (Who Did What) | 
 | :------------ |:---------------:| :-----|
-| Cheo Hao | A0146967L | 1)Market Research and Business Analysis<br/>2)Recipe Database Collection<br/>3)Database Pre-processing and Structure Arrangement<br/>4)User Input Keyword Extraction<br/>5)Report Writing and Video Preparation
-| 
+| Cheo Hao | A0146967L | 1)Market Research and Business Analysis<br/>2)Recipe Database Collection<br/>3)Database Pre-processing and Structure Arrangement<br/>4)User Input Keyword Extraction<br/>5)Report Writing and Video Preparation| 
 | Chiu Man Shan | A0249252A | 1)System Architecture<br/>2)Text Search Algorithm<br/>3)Rule based information extraction <br/>4)Telegram Chatbot<br/> 5)Project deployment| 
-| Kuch Swee Cheng | A0249246X | 1)Implement ingredient object detection using YOLOv5<br/>2)Trained custom image dataset<br/>3)Explored using Nvidia Jetson Nano SBC, edge server image inference and object detection. 
-|
-| Zhao Lutong | A0249279L | 1)Implement Content-based Recommendation Engine <br/>2)Implement similarity matching evaluation using two distance metrics<br/>3)Retrieve the top N highest scoring recipes, aggregate their nutrition metadata information<br>4)Pre-compute most top-N recommended recipe for all existing recipes in the database on a regular basis and store it as JSON in Elastic Search
-| 
+| Kuch Swee Cheng | A0249246X | 1)Implement ingredient object detection using YOLOv5<br/>2)Trained custom image dataset<br/>3)Explored using Nvidia Jetson Nano SBC, edge server image inference and object detection. |
+| Zhao Lutong | A0249279L | 1)Implement Content-based Recommendation Engine <br/>2)Implement similarity matching evaluation using two distance metrics<br/>3)Retrieve the top N highest scoring recipes, aggregate their nutrition metadata information<br>4)Pre-compute most top-N recommended recipe for all existing recipes in the database on a regular basis and store it as JSON in Elastic Search| 
 
 ---
 
